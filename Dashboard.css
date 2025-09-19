@@ -1,0 +1,895 @@
+/* Dashboard.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body, html {
+ margin: 0;
+ font-family: 'Inter', sans-serif;
+ background-color: #1a1a2e; /* A dark blue/purple shade */
+ color: #fff; /* Changed text color to white for better contrast */
+ min-height: 100vh; /* Ensure body takes full viewport height */
+ overflow-x: hidden; /* Prevent horizontal scrollbar from stars */
+
+ /* --- ALL STARS AND MOON FOR THE ENTIRE SCREEN --- */
+ background-image:
+ /* Moon at 85% 65% / 15% auto */
+ url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M 70 30 A 20 20 0 0 0 50 10 A 15 15 0 0 1 70 30 Z" fill="#FFD700"/></svg>'),
+
+ /* Stars - varying sizes and positions - Many more added for density */
+ radial-gradient(1.5px 1.5px at 5% 5%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 15% 10%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 25% 3%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 35% 12%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 45% 7%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 55% 18%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 65% 1%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 75% 15%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 85% 9%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 95% 20%, #eee, rgba(0,0,0,0)),
+
+ radial-gradient(1px 1px at 2% 25%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 12% 30%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 22% 22%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 32% 35%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 42% 28%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 52% 40%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 62% 33%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 72% 45%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 82% 38%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 92% 50%, #eee, rgba(0,0,0,0)),
+
+ radial-gradient(2px 2px at 8% 55%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 18% 60%, #eee, rgba(0,0,0,0)),
+ radial-gradient(3px 3px at 28% 52%, #eee, rgba(0,0,0,0)),
+  radial-gradient(1px 1px at 38% 65%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 48% 58%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 58% 70%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 68% 62%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 78% 75%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 88% 68%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 98% 80%, #eee, rgba(0,0,0,0)),
+
+ radial-gradient(1.5px 1.5px at 3% 85%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 13% 90%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 23% 77%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 33% 92%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 43% 83%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 53% 98%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 63% 87%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 73% 99%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 83% 82%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 93% 95%, #eee, rgba(0,0,0,0)),
+
+ /* Additional scattering for more density */
+  radial-gradient(1.5px 1.5px at 47% 10%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 5% 35%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 90% 45%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 15% 78%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 70% 20%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 20% 90%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 80% 5%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 40% 75%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 60% 30%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 10% 65%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 95% 12%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 50% 85%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 25% 18%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 75% 60%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 5% 50%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 85% 95%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 30% 25%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 65% 70%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1.5px at 45% 90%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 12% 55%, #eee, rgba(0,0,0,0)),
+
+ radial-gradient(1px 1px at 7% 10%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 17% 15%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 27% 8%, #eee, rgba(0,0,0,0)),
+ radial-gradient(3px 3px at 37% 20%, #eee, rgba(0,0,0,0)),
+radial-gradient(1px 1px at 47% 13%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 57% 25%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 67% 18%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 77% 30%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 87% 23%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 97% 35%, #eee, rgba(0,0,0,0)),
+
+ radial-gradient(2px 2px at 1% 40%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 11% 45%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 21% 37%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 31% 50%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 41% 42%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 51% 55%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 61% 48%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 71% 60%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 81% 53%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 91% 65%, #eee, rgba(0,0,0,0)),
+
+ radial-gradient(1.5px 1.5px at 6% 70%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 16% 75%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 26% 67%, #eee, rgba(0,0,0,0)),
+  radial-gradient(2.5px 2.5px at 36% 80%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 46% 72%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 56% 85%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 66% 78%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 76% 90%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 86% 83%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 96% 95%, #eee, rgba(0,0,0,0));
+
+ background-position:
+ 85% 65%, /* Moon position */
+ /* Star positions - one for each radial-gradient above */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 1 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 2 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 3 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 4 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 5 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 6 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 7 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 8 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 9 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto; /* Row 10 */
+
+ background-size:
+ 15% auto, /* Moon size */
+ /* Star sizes - one for each radial-gradient. 'auto' is fine for most small stars. */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto;
+
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+
+.dashboard-container {
+ position: relative;
+ z-index: 1; /* Ensure content is above the body background */
+ padding-top: 4rem;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ background: none; /* No specific background for dashboard-container itself */
+}
+
+/* Removed @keyframes move-gradient as it's not used for this background setup */
+@keyframes move-gradient {
+ 0%, 100% {
+ background-position: 20% 20%, 80% 80%;
+ background-size: 300% 300%;
+ }
+ 50% {
+ background-position: 25% 25%, 75% 75%;
+ background-size: 350% 350%;
+ }
+}
+
+.dashboard-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 2rem;
+ margin-bottom: 2rem;
+ color: #fff; /* Ensure header text is white */
+}
+
+.dashboard-title {
+ font-size: 2rem;
+ font-weight: 700;
+}
+
+.header-controls {
+ display: flex;
+ gap: 1rem;
+}
+
+/* Common styles for buttons like Login/Register in your screenshot */
+/* Applying to theme-toggle and logout-button for consistency, adjust theme-toggle if needed */
+.theme-toggle,
+.logout-button {
+ padding: 0.5rem 1rem;
+ border-radius: 8px;
+ cursor: pointer;
+ font-weight: 600;
+ transition: transform 0.2s ease;
+ background: none; /* Make background transparent like Login/Register */
+ border: 1px solid #c0c0c0; /* Add a light gray border */
+ color: #c0c0c0; /* Set text color to light gray */
+}
+
+
+
+.theme-toggle:hover,
+.logout-button:hover {
+ transform: scale(1.05);
+ background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+.dashboard-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+ gap: 2rem;
+ padding: 0 2rem 2rem;
+}
+
+.card {
+ background: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+ backdrop-filter: blur(12px);
+ border-radius: 20px;
+ overflow: hidden;
+ box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Darker shadow for visibility */
+ display: flex;
+ flex-direction: column;
+ transition: transform 0.3s ease;
+ color: #fff; /* Card text color */
+}
+
+.card:hover {
+   transform: translateY(-8px);
+}
+
+.card-thumbnail {
+ width: 100%;
+ height: 150px;
+object-fit: cover;
+}
+
+.card-content {
+ padding: 1rem;
+display: flex;
+ flex-direction: column;
+ flex: 1;
+}
+
+.card-title {
+ font-size: 1.25rem;
+ font-weight: 600;
+ margin-bottom: 0.5rem;
+}
+
+.card-description {
+ font-size: 0.95rem;
+ margin-bottom: 1rem;
+}
+
+.card-info {
+ display: flex;
+ justify-content: space-between;
+ font-size: 0.875rem;
+ margin-bottom: 1rem;
+}
+
+.card-footer {
+ margin-top: auto;
+}
+
+.card-footer.two-buttons {
+ display: flex;
+ justify-content: space-between;
+ gap: 0.5rem;
+}
+
+.subscribe-button,
+.unsubscribe-button {
+ flex: 1;
+ padding: 0.6rem;
+ border: none;
+ border-radius: 8px;
+ font-weight: 600;
+ cursor: pointer;
+ transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.subscribe-button {
+ background: linear-gradient(135deg, #007bff, #00bcd4);
+ color: white;
+}
+
+.subscribe-button.is-subscribed {
+ background-color: #4caf50;
+ color: white;
+}
+
+.unsubscribe-button {
+ background: #f0f0f0;
+ color: #333;
+}
+
+.subscribe-button:hover,
+.unsubscribe-button:hover {
+ transform: scale(1.02);
+}
+
+.modal-overlay {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: rgba(0, 0, 0, 0.6);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 999;
+}
+
+.modal-box {
+ background:  #1a1a2e;;
+ padding: 2rem;
+ border-radius: 16px;
+ width: 90%;
+ max-width: 500px;
+ position: relative;
+  /* Ensure modal text is readable */
+}
+
+.close-modal-button {
+ position: absolute;
+ top: 1rem;
+ right: 1rem;
+ font-size: 1.5rem;
+ background: none;
+ border: none;
+ cursor: pointer;
+ color: whitesmoke;
+}
+
+.modal-header {
+ margin-bottom: 1.5rem;
+}
+
+.modal-steps {
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+}
+
+.step {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ font-weight: 600;
+ color: #888;
+}
+
+.step.active {
+ color: #007bff;
+}
+
+.step.complete {
+ color: #4caf50;
+}
+
+.step-connector {
+ height: 2px;
+ width: 20px;
+ background-color: #ccc;
+}
+
+.details-form input,
+.details-form select,
+.payment-options label {
+ width: 100%;
+ margin-bottom: 1rem;
+ padding: 0.6rem;
+ border-radius: 8px;
+ border: 1px solid #ccc;
+}
+
+.payment-options label {
+ display: block;
+ cursor: pointer;
+}
+
+.modal-buttons {
+ display: flex;
+ justify-content: flex-end;
+ gap: 1rem;
+}
+
+.primary-button,
+.secondary-button {
+ padding: 0.6rem 1rem;
+ border-radius: 8px;
+ border: none;
+ font-weight: 600;
+ cursor: pointer;
+}
+
+.primary-button {
+ background: #007bff;
+ color: white;
+}
+
+.secondary-button {
+ background: #f1f1f1;
+ color: #333;
+}
+/* Dashboard.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body, html {
+ margin: 0;
+ font-family: 'Inter', sans-serif;
+ background-color: #1a1a2e; /* A dark blue/purple shade */
+ color: #fff; /* Changed text color to white for better contrast */
+ min-height: 100vh; /* Ensure body takes full viewport height */
+ overflow-x: hidden; /* Prevent horizontal scrollbar from stars */
+
+ /* --- ALL STARS AND MOON FOR THE ENTIRE SCREEN --- */
+ background-image:
+ /* Moon at 85% 65% / 15% auto */
+ url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M 70 30 A 20 20 0 0 0 50 10 A 15 15 0 0 1 70 30 Z" fill="#FFD700"/></svg>'),
+
+ /* Stars - varying sizes and positions - Many more added for density */
+ radial-gradient(1.5px 1.5px at 5% 5%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 15% 10%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 25% 3%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 35% 12%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 45% 7%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 55% 18%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 65% 1%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 75% 15%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 85% 9%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 95% 20%, #eee, rgba(0,0,0,0)),
+
+ radial-gradient(1px 1px at 2% 25%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 12% 30%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 22% 22%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 32% 35%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 42% 28%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 52% 40%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 62% 33%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 72% 45%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 82% 38%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 92% 50%, #eee, rgba(0,0,0,0)),
+
+ radial-gradient(2px 2px at 8% 55%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 18% 60%, #eee, rgba(0,0,0,0)),
+ radial-gradient(3px 3px at 28% 52%, #eee, rgba(0,0,0,0)),
+  radial-gradient(1px 1px at 38% 65%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 48% 58%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 58% 70%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 68% 62%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 78% 75%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 88% 68%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 98% 80%, #eee, rgba(0,0,0,0)),
+
+ radial-gradient(1.5px 1.5px at 3% 85%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 13% 90%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 23% 77%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 33% 92%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 43% 83%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 53% 98%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 63% 87%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 73% 99%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 83% 82%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 93% 95%, #eee, rgba(0,0,0,0)),
+
+ /* Additional scattering for more density */
+  radial-gradient(1.5px 1.5px at 47% 10%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 5% 35%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 90% 45%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 15% 78%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 70% 20%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 20% 90%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 80% 5%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 40% 75%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 60% 30%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 10% 65%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 95% 12%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 50% 85%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 25% 18%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 75% 60%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 5% 50%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 85% 95%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 30% 25%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 65% 70%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1.5px at 45% 90%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 12% 55%, #eee, rgba(0,0,0,0)),
+
+ radial-gradient(1px 1px at 7% 10%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 17% 15%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 27% 8%, #eee, rgba(0,0,0,0)),
+ radial-gradient(3px 3px at 37% 20%, #eee, rgba(0,0,0,0)),
+radial-gradient(1px 1px at 47% 13%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 57% 25%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 67% 18%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 77% 30%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 87% 23%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 97% 35%, #eee, rgba(0,0,0,0)),
+
+ radial-gradient(2px 2px at 1% 40%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 11% 45%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 21% 37%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 31% 50%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 41% 42%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 51% 55%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 61% 48%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 71% 60%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 81% 53%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 91% 65%, #eee, rgba(0,0,0,0)),
+
+ radial-gradient(1.5px 1.5px at 6% 70%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 16% 75%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 26% 67%, #eee, rgba(0,0,0,0)),
+  radial-gradient(2.5px 2.5px at 36% 80%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 46% 72%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 56% 85%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1px 1px at 66% 78%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2.5px 2.5px at 76% 90%, #eee, rgba(0,0,0,0)),
+ radial-gradient(2px 2px at 86% 83%, #eee, rgba(0,0,0,0)),
+ radial-gradient(1.5px 1.5px at 96% 95%, #eee, rgba(0,0,0,0));
+
+ background-position:
+ 85% 65%, /* Moon position */
+ /* Star positions - one for each radial-gradient above */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 1 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 2 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 3 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 4 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 5 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 6 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 7 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 8 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, /* Row 9 */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto; /* Row 10 */
+
+ background-size:
+ 15% auto, /* Moon size */
+ /* Star sizes - one for each radial-gradient. 'auto' is fine for most small stars. */
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto,
+ auto, auto, auto, auto, auto, auto, auto, auto, auto, auto;
+
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+
+.dashboard-container {
+ position: relative;
+ z-index: 1; /* Ensure content is above the body background */
+ padding-top: 4rem;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ background: none; /* No specific background for dashboard-container itself */
+}
+
+/* Removed @keyframes move-gradient as it's not used for this background setup */
+@keyframes move-gradient {
+ 0%, 100% {
+ background-position: 20% 20%, 80% 80%;
+ background-size: 300% 300%;
+ }
+ 50% {
+ background-position: 25% 25%, 75% 75%;
+ background-size: 350% 350%;
+ }
+}
+
+.dashboard-header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 2rem;
+ margin-bottom: 2rem;
+ color: #fff; /* Ensure header text is white */
+}
+
+.dashboard-title {
+ font-size: 2rem;
+ font-weight: 700;
+}
+
+.header-controls {
+ display: flex;
+ gap: 1rem;
+}
+
+/* Common styles for buttons like Login/Register in your screenshot */
+/* Applying to theme-toggle and logout-button for consistency, adjust theme-toggle if needed */
+.theme-toggle,
+.logout-button {
+ padding: 0.5rem 1rem;
+ border-radius: 8px;
+ cursor: pointer;
+ font-weight: 600;
+ transition: transform 0.2s ease;
+ background: none; /* Make background transparent like Login/Register */
+ border: 1px solid #c0c0c0; /* Add a light gray border */
+ color: #c0c0c0; /* Set text color to light gray */
+}
+
+
+
+.theme-toggle:hover,
+.logout-button:hover {
+ transform: scale(1.05);
+ background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+.dashboard-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+ gap: 2rem;
+ padding: 0 2rem 2rem;
+}
+
+.card {
+ background: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
+ backdrop-filter: blur(12px);
+ border-radius: 20px;
+ overflow: hidden;
+ box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Darker shadow for visibility */
+ display: flex;
+ flex-direction: column;
+ transition: transform 0.3s ease;
+ color: #fff; /* Card text color */
+}
+
+.card:hover {
+   transform: translateY(-8px);
+}
+
+.card-thumbnail {
+ width: 100%;
+ height: 150px;
+object-fit: cover;
+}
+
+.card-content {
+ padding: 1rem;
+display: flex;
+ flex-direction: column;
+ flex: 1;
+}
+
+.card-title {
+   font-size: 1.3rem; /* Slightly increased font size */
+   font-weight: 700; /* Made bolder */
+   margin-bottom: 0.5rem;
+   font-family: 'Lora', serif; /* Explicitly set font */
+   color: white; /* Subtle gold for titles */
+   letter-spacing: 0.03em; /* Added subtle letter spacing */
+}
+
+.card-description {
+   font-size: 1rem; /* Slightly increased font size for better readability */
+   margin-bottom: 1rem;
+   font-family: 'Montserrat', sans-serif; /* Explicitly set font */
+   line-height: 1.6; /* Improved readability */
+   color: lightgrey; /* Slightly muted white for descriptions */
+}
+.card-info {
+ display: flex;
+ justify-content: space-between;
+ font-size: 0.875rem;
+ margin-bottom: 1rem;
+}
+
+.card-footer {
+ margin-top: auto;
+}
+
+.card-footer.two-buttons {
+ display: flex;
+ justify-content: space-between;
+ gap: 0.5rem;
+}
+
+.subscribe-button,
+.unsubscribe-button {
+ flex: 1;
+ padding: 0.6rem;
+ border: none;
+ border-radius: 8px;
+ font-weight: 600;
+ cursor: pointer;
+ transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.subscribe-button {
+ background: linear-gradient(135deg, #007bff, #00bcd4);
+ color: white;
+}
+
+.subscribe-button.is-subscribed {
+   background: #28a745 !important; /* Use shorthand 'background' to override all background properties */
+   background-image: none !important; /* Explicitly ensure no background image/gradient */
+   color: white !important; /* Ensure text is visible on green background, forced with !important */
+   cursor: default !important; /* Ensure non-clickable cursor */
+   box-shadow: none !important; /* Remove any box-shadow that might interfere */
+   border: none !important; /* Just to be absolutely sure no border remains */
+ }
+
+.subscribe-button.is-subscribed {
+   background-color: #16a34a; /* Tailwind 'green-600' from your earlier code */
+   color: white;
+   cursor: not-allowed;
+   border: none;
+   opacity: 1;
+}
+
+.unsubscribe-button {
+ background: #f0f0f0;
+ color: #333;
+}
+
+.subscribe-button:hover,
+.unsubscribe-button:hover {
+ transform: scale(1.02);
+}
+
+.modal-overlay {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: rgba(0, 0, 0, 0.6);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 999;
+}
+
+.modal-box {
+ background:  #1a1a2e;;
+ padding: 2rem;
+ border-radius: 16px;
+ width: 90%;
+ max-width: 500px;
+ position: relative;
+  /* Ensure modal text is readable */
+}
+
+.close-modal-button {
+ position: absolute;
+ top: 1rem;
+ right: 1rem;
+ font-size: 1.5rem;
+ background: none;
+ border: none;
+ cursor: pointer;
+ color: whitesmoke;
+}
+
+.modal-header {
+ margin-bottom: 1.5rem;
+}
+
+.modal-steps {
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+}
+
+.step {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ font-weight: 600;
+ color: #888;
+}
+
+.step.active {
+ color: lightblue;
+}
+
+.step.complete {
+ color: #4caf50;
+}
+
+.step-connector {
+ height: 2px;
+ width: 20px;
+ background-color:white;
+ 
+}
+
+
+/* .details-form select{
+   width: 100%;
+ margin-bottom: 1rem;
+ padding: 0.6rem;
+ border-radius: 8px;
+ background-color:  transparent;
+color: white;
+}
+.details-form input,
+.payment-options label {
+ width: 100%;
+ margin-bottom: 1rem;
+ padding: 0.6rem;
+ border-radius: 8px;
+ background-color:  transparent;
+ color: white;
+} */
+
+/* Update this existing block in your CSS */
+.details-form input,
+.details-form select { /* Removed .payment-options label from here, as it's a different element */
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #ccc; /* Still want a border to define the input box */
+    background-color: transparent; /* Input and select box background transparent */
+    color: #fff; /* Input and select box text white */
+}
+
+/* This is for the placeholder text for inputs */
+.details-form input::placeholder {
+    color: #a0a0a0; /* Light gray placeholder for inputs */
+    opacity: 1;
+}
+
+/* Specific styles for the select element's default/initial option text */
+.details-form select option[value=""] { /* Targeting the default "Preferred Time Of Day" option specifically */
+    color: #a0a0a0; /* Light gray color for the unselected placeholder option */
+}
+
+/* Style for actual selected options within the dropdown */
+.details-form select option {
+    background-color: #1a1a2e; /* Set option background to match your body background */
+    color: #fff; /* Set option text color to white */
+}
+
+/* Ensure the label is styled separately if it was grouped */
+.payment-options label {
+    display: block;
+    cursor: pointer;
+    /* Add any other styles specific to this label if needed */
+}
+
+.payment-options label {
+ display: block;
+ cursor: pointer;
+}
+
+.modal-buttons {
+ display: flex;
+ justify-content: flex-end;
+ gap: 1rem;
+}
+
+.primary-button,
+.secondary-button {
+ padding: 0.6rem 1rem;
+ border-radius: 8px;
+ border: none;
+ font-weight: 600;
+ cursor: pointer;
+}
+
+.primary-button {
+ background: #007bff;
+ color: white;
+}
+
+.secondary-button {
+ background: #f1f1f1;
+ color: #333;
+}
+
+
+.unsubscribe-button:disabled { opacity: 0.6;
+ cursor: not-allowed;
+}
+
+.unsubscribe-button:disabled { opacity: 0.6;
+ cursor: not-allowed;
+}

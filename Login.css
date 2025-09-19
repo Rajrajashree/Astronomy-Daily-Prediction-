@@ -1,0 +1,73 @@
+/* Login.css */
+.login-page {
+ height: 100vh;
+   background: #e6efff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ 
+  .login-box {
+ background: white;
+ padding: 30px 40px;
+border-radius: 15px;
+ box-shadow: 0 0 10px rgba(0,0,0,0.1);
+   text-align: center;
+ width: 350px;
+      border: none; /* ADD THIS LINE TO ENSURE NO BORDER */
+ }
+ 
+ .login-box h2 {
+   margin-bottom: 20px;
+ font-weight: bold;
+ }
+ 
+ .login-box form input {
+ width: 100%;
+ padding: 12px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc; /* Input fields have a border */
+   border-radius: 8px;
+   font-size: 16px;
+ }
+ 
+ .login-box button[type="submit"] {
+   width: 100%;
+   padding: 12px;
+   background-color: #409eff;
+   color: white;
+   border: none; /* Submit button has no border */
+   border-radius: 8px;
+   font-size: 16px;
+   cursor: pointer;
+ }
+ 
+ .login-box button[type="submit"]:hover {
+   background-color: #2d8cf0;
+ }
+ 
+ .toggle-login {
+ display: flex;
+ justify-content: center;
+ gap: 10px;
+ margin-top: 1rem;
+  }
+  
+  .toggle-login button {
+ padding: 8px 16px;
+ background-color: #e9ecef;
+ border: none; /* Toggle buttons have no border */
+ border-radius: 6px;
+ cursor: pointer;
+ font-weight: bold;
+  }
+  
+  .toggle-login button:hover:not(:disabled) {
+background-color: #d0d8e0;
+  }
+  
+  .toggle-login button:disabled {
+ background-color: #007bff;
+ color: white;
+ cursor: default;
+  }

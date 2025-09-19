@@ -1,0 +1,159 @@
+/* LandingPage.css - A modern redesign for your original component */
+
+/* Import a modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* Apply a base style to the body for the background effect to work smoothly */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8F9FA; /* A very light grey background */
+    margin: 0;
+}
+
+/* The main container for the landing page */
+.landing-container {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Changed to column to stack content */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden; /* Hide the overflow from the animated gradients */
+    padding: 6rem 2rem 2rem 2rem; /* Added more top padding */
+    box-sizing: border-box;
+}
+
+/* Animated background gradients (Unchanged) */
+.landing-container::before,
+.landing-container::after {
+    content: '';
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background-image: radial-gradient(circle, rgba(49, 46, 229, 0.15), rgba(49, 46, 229, 0));
+    border-radius: 50%;
+    z-index: 1;
+    animation: move-gradient 25s infinite alternate ease-in-out;
+}
+
+.landing-container::before {
+    top: -200px;
+    left: -200px;
+    animation-delay: 0s;
+}
+
+.landing-container::after {
+    bottom: -300px;
+    right: -300px;
+    width: 1000px;
+    height: 1000px;
+    background-image: radial-gradient(circle, rgba(13, 148, 136, 0.2), rgba(13, 148, 136, 0));
+    animation-duration: 30s;
+    animation-delay: -5s;
+}
+
+@keyframes move-gradient {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(100px, 150px) scale(1.2); }
+    100% { transform: translate(-50px, -100px) scale(1); }
+}
+
+
+/* Styling for the left buttons container (Unchanged) */
+.left-buttons {
+    position: absolute;
+    top: 2rem;
+    right: 2rem; /* Moved to the top right for a more standard layout */
+    display: flex;
+    gap: 1rem;
+    z-index: 3; /* Increased z-index */
+}
+
+.left-buttons button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.left-buttons button:first-child {
+    background-image: linear-gradient(to right, #4C6EF5, #22B8CF);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.left-buttons button:last-child {
+    background-color: #e9ecef;
+    color: #343a40;
+}
+
+.left-buttons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for the main content area */
+.main-description {
+    text-align: center;
+    z-index: 2;
+    max-width: 750px; /* Increased max-width */
+    margin-bottom: 4rem; /* Added space below the main title section */
+}
+
+.main-description h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 1rem;
+}
+
+.main-description p {
+    font-size: 1.25rem;
+    color: #495057;
+    line-height: 1.6;
+}
+
+/* NEW SECTION: Feature descriptions to fill the screen */
+.features-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1100px;
+    z-index: 2;
+    text-align: left;
+}
+
+.feature-card {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #495057;
+    margin-bottom: 0;
+}
+
+/* Example: Adding color to the titles */
+.feature-card.horoscope h3 { color: #4C6EF5; }
+.feature-card.food h3 { color: #845EF7; }
+.feature-card.sports h3 { color: #F76707; }

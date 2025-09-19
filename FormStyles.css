@@ -1,0 +1,143 @@
+/* Styles for the new simplified, borderless Auth Form Modal */
+
+/* Modal Backdrop */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 20, 69, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Wrapper for the form content, no background or border */
+.form-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: popIn 0.4s 0.1s ease-out forwards;
+}
+
+/* Title styles */
+.form-content-wrapper h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    margin-bottom: 2.5rem;
+    color: #e0e6f9; /* Ensures the title is a light color */
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(160, 160, 255, 0.5);
+}
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-content-wrapper form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Inputs */
+.form-content-wrapper input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 1rem;
+  background-color: rgba(12, 20, 69, 0.7);
+  border: 1px solid rgba(224, 230, 249, 0.3);
+  color: #e0e6f9;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Lora', serif;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-content-wrapper input::placeholder {
+    color: #b9c2e3;
+}
+
+.form-content-wrapper input:focus {
+  border-color: #a0a0ff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(160, 160, 255, 0.3);
+}
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #a0a0ff, #7a7aff);
+  color: #0c1445;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: 'Lora', serif;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(160, 160, 255, 0.4);
+}
+
+/* Bottom actions container */
+.bottom-actions {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Toggle and Back Buttons */
+.toggle-button, .back-button {
+  background: none;
+  border: none;
+  color: #b9c2e3;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Lora', serif;
+  transition: color 0.3s ease;
+  padding: 0.5rem;
+}
+
+.toggle-button:hover, .back-button:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Success and Error Messages */
+.success, .error {
+  margin-top: 1rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+}
+
+.success { color: #5dffab; }
+.error { color: #ff8f8f; }
