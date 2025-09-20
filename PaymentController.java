@@ -63,7 +63,7 @@ public class PaymentController {
     @PostMapping("/create-order")
     public String createOrder(@RequestBody Map<String, String> data) {
         try {
-            RazorpayClient client = new RazorpayClient("rzp_live_qIBPkGYUdLQG4h", "iI5Oa8jT1yrx2E37BTdS4NEL");
+            RazorpayClient client = new RazorpayClient("RazorpayKey Id", "RazorpayKey Secret");
 
             JSONObject orderRequest = new JSONObject();
             orderRequest.put("amount", Integer.parseInt(data.get("amount")));
@@ -83,7 +83,7 @@ public class PaymentController {
     @PostMapping("/verify-payment")
     public ResponseEntity<String> verifyPayment(@RequestBody SubscriptionDTO subscriptionDTO) {
         try {
-            String razorpaySecret = "iI5Oa8jT1yrx2E37BTdS4NEL";
+            String razorpaySecret = "RazorpayKey Secret";
 
             JSONObject options = new JSONObject();
             options.put("razorpay_order_id", subscriptionDTO.getRazorpayOrderId());
