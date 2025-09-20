@@ -63,7 +63,7 @@ public class PaymentController {
     @PostMapping("/create-order")
     public String createOrder(@RequestBody Map<String, String> data) {
         try {
-            RazorpayClient client = new RazorpayClient("RazorpayKey Id", "RazorpayKey Secret");
+            RazorpayClient client = new RazorpayClient("Your azorpayKey Id", "Your razorpay Key Secret");
 
             JSONObject orderRequest = new JSONObject();
             orderRequest.put("amount", Integer.parseInt(data.get("amount")));
