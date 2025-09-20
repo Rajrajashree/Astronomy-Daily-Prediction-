@@ -27,7 +27,7 @@ public class PredictionService {
     private PredictionRepository predictionRepository; 
     
     // ➡️ IMPORTANT: Replace with your actual Gemini API key.
-    private final String geminiApiKey = "AIzaSyCd8D9UVHdV1mjVVtEwkXr1hmJDkSYVXSA";
+    private final String geminiApiKey = "Gemini API Key";
 
     public void generateAndSendPrediction(Subscription subscription, User user) {
         String prompt = buildPredictionPrompt(subscription);
